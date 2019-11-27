@@ -23,14 +23,14 @@ function Image(props: Props): React.Node {
   const [onScreen, setOnScreen] = useState(false)
 
   // Use local images for development
-  let url = `https://dephotos.imgix.net/${props.name}`
-  if (
-    process.env.PUBLIC_URL !== undefined &&
-    process.env.NODE_ENV &&
-    process.env.NODE_ENV.toUpperCase() === "DEVELOPMENT"
-  ) {
-    url = `${process.env.PUBLIC_URL || ""}/images/${props.name}`
-  }
+  // let url = `https://dephotos.imgix.net/${props.name}`
+  // if (
+  //   process.env.PUBLIC_URL !== undefined &&
+  //   process.env.NODE_ENV &&
+  //   process.env.NODE_ENV.toUpperCase() === "DEVELOPMENT"
+  // ) {
+  const url = `${process.env.PUBLIC_URL || ""}/images/${props.name}`
+  // }
 
   const imgClass = [
     "image__img",
